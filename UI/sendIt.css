@@ -1,0 +1,267 @@
+
+body{
+	color:tan;
+	margin: 0px;
+	padding: 0px;
+
+	background-color: grey;
+
+	color: palegreen;
+	font: bold;
+
+
+}
+footer{
+text-indent: 20%;
+background-color: green;
+min-height: 20px;
+width: 70%;
+min-width: 450px;
+font: bold;
+color: black;
+margin: auto;
+
+}
+
+.order{
+	border-radius: 15px;
+	text-indent: 20%;
+	margin-top: 10%;
+
+}
+
+.form{
+	padding-left: 30%;
+	width: 50%;
+	margin: auto;
+}
+
+table{
+	background-color: white;
+	margin-left: 4px;
+	width: 97%;
+	border-radius: 15px;
+
+}
+#footer1{
+	margin-top: 0;
+	padding-top: 0;
+	margin-left: 20%;
+}
+#footer2{
+	margin-top: 0;
+	padding-top: 0;
+	margin-left: 20%;
+}
+#destination, #id, #item, #price{
+	color: black;
+	margin: 3%;
+	margin-left: 8%;
+}
+.userName{
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.heading{
+
+	text-indent: 40%;
+	color: white;
+	width: 100%;
+	background-color: green;
+	height: 7%;
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+}
+#headp{
+
+color: white;
+font-size: 20px;
+
+width:100%;
+margin-top: 0;
+	padding-top: 0;
+	background-color: green;
+
+}
+
+.headingl{
+	text-indent: 40%;
+	color: white;
+	width: 100%;
+	background-color: green;
+	height: 7%;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#headP{
+	margin-top: 0;
+	padding-top: 0;
+	letter-spacing: 0px;
+}
+#menu{
+
+
+}
+.menu_list{
+	display: inline;
+
+
+}
+.menu_llist{
+	display: inline;
+
+	margin-top: 0;
+	padding-top: 0;
+	margin-left: 10%;
+}
+
+.menu_list a{
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.5);
+	font: bold;
+	font-size: 70%%;
+	margin-right: 3%;
+	text-transform: uppercase;
+	padding: 2px;
+
+}
+
+.menu_list a:hover{
+	color: white;
+	border-bottom: 3px solid white;
+}
+
+
+
+#profileBody{
+	min-height: 635px;
+	width: 75%;
+	margin: auto;
+	background-color: red;
+
+
+}
+
+
+
+#loginContainer{
+	width: 40px;
+	position: relative;
+	top: 10%;
+	left: 60%;
+}
+
+.mainContainer{
+	width: 70%;
+	background-image: url(courier6.jpeg);
+	margin: auto;
+	min-height: 600px;
+	min-width: 450px;
+	opacity: 0.9;
+	overflow: hidden;
+
+}
+.mainContainerW{
+	width: 70%;
+	background-image: url(caourier.jpeg);
+	margin: auto;
+	height: 620px;
+	min-width: 450px;
+	opacity: 0.9;
+	overflow: hidden;
+
+}
+.login{
+border-radius: 15px;
+	text-indent: 20%;
+	margin-bottom: 10px;
+}
+
+#orderResponse{
+	color: green;
+}
+#locationResponse{
+	color: green;
+}
+
+.submit{
+background-color: yellowgreen;
+color: white;
+font: bold;
+border-radius: 250px 250px 250px 250px;
+margin-left: 5%;
+font-size: 20px;
+cursor: pointer;
+
+}
+.cancelOrder{
+background-color: yellowgreen;
+cursor: pointer;
+color: white;
+
+}
+.cancelOrder:hover{
+	background-color: yellowgreen;
+}
+.location{
+background-color: yellowgreen;
+cursor: pointer;
+
+}
+
+
+
+#clickToReg{
+	margin: 30% 40% 40% 40%;
+	width: 40%;
+}
+
+fieldset{
+	font: bold;
+	color: pink;
+	width: 70%;
+	margin: auto;
+	min-width: 400px;
+}
+.submit a{
+	text-decoration: none;
+	color: white;
+}
+form{
+	margin: auto;
+}
+
+
+
+
+legend{
+text-indent: 15%;
+font-size: 20px;
+}
+#aside{
+	margin: 0;
+	padding: 0;
+	background-color: green;
+}
+
+
+
+
+
+
+#submit{
+background-color: pink;
+color: white;
+font: bold;
+border-radius: 250px 250px 250px 250px;
+margin-left: 35%;
+font-size: 20px;
+cursor: pointer;
+
+}
+
+.submit:hover{
+	background-color: darkgreen;
+}
