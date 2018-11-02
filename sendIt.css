@@ -201,9 +201,10 @@ background-color: yellowgreen;
 cursor: pointer;
 color: white;
 
+
 }
 .cancelOrder:hover{
-	background-color: yellowgreen;
+	background-color: green;
 }
 .location{
 background-color: yellowgreen;
