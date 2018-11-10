@@ -61,6 +61,32 @@ route.get('/users/:userId/parcels',function(req,res){
 
 })
 
+route.put('/parcels/:parcelId/cancel',function(req,res){
+  let index=0;
+  let cancelIndex='unmatched';
+  dat.forEach(x=>{
+    if(req.params.parcelId==x.id){
+      cancelIndex=index;
+    }
+    index++;
+  });
+  if(cancelIndex ==='unmatched'){
+    let message={
+      value:'not found'
+    };
+      res.status('202').send(message);
+  }
+  else{
+    let tempdata=[];
+    tempdata.push(dat[cancelIndex]);
+    dat.splice(cancelIndex,1);
+    res.status('200').json({...tempdata});
+  }
+
+
+})
+
+
 
 
 
