@@ -40,27 +40,6 @@ route.get('/parcels/:parcelsId',function(req,res){
 
 })
 
-route.get('/users/:userId/parcels',function(req,res){
-    let tempData=[ ];
-    let found='no';
-    dat.forEach(x=>{
-      if(x.name==req.params.userId){
-        tempData.push(x);
-        found='yes';
-      }
-    })
-    if(found==='yes'){
-      res.status('200').send({...tempData});
-    }else{
-      let message={
-        value:'not found'
-      };
-      res.status('202').send(message);
-
-    }
-
-})
-
 
 
 
