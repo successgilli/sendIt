@@ -86,6 +86,16 @@ route.put('/parcels/:parcelId/cancel',function(req,res){
 
 })
 
+route.post('/parcels',function(req,res){
+
+  var x=req.body;
+  x.id=Math.floor((Math.random()*10000000+i));
+  dat.push(x);
+  i++;
+  res.status('200').json(req.body);
+
+})
+
 
 
 
