@@ -12,6 +12,13 @@ var db=require('../model/db.js');
     next();
   }); */
 
+route.get('/',function(req,res){
+  let message={
+    value: 'welcome to Gilberts API. nav to "/parcels " for all orders, post ur order to "/parcels", get all orders by a user from "/users/userName/parcels", cancel order from "/parcels/parcelID/cancel" and get specific parcel with "/parcel/parcelsID" '
+  };
+  res.status('200').send(message.value);
+})
+
 route.get('/parcels',function(req,res){
   //res.header("Access-Control-Allow-Origin", "*");
   res.status('200').json({...dat});
