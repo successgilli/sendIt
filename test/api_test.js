@@ -9,6 +9,17 @@ chai.use(chaiHttp);
 var id;
 var data;
 
+//test get welcome message routes
+describe("test for welcome route",function(){
+  it("should return a string ",(done)=>{
+    chai.request(server).get('/api/v1').end((req,res)=>{
+      res.body.should.be.a('object');
+      res.should.have.status(200);
+    })
+    done();
+  })
+})
+
 //get parcel rote test
 describe(' test the get parcel route "/"parcels',  function(){
 
@@ -20,10 +31,11 @@ let param='/api/v1/parcels';
         chai.request(server).get(param).end((err,res)=>{
             res.should.have.status(200);
             (res.body).should.be.a('object');
-            done();
+
 
         })
 
+        done();
 
     })
 

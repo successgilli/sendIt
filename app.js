@@ -18,6 +18,6 @@ app.use('/api/v1',routes);
 
 
 
-module.exports=app.listen(process.env.port || 3000, function(){
-  console.log('we are on prot 3000');
+module.exports=app.listen(process.env.PORT || 8080, function(){
+  console.log('we are on port 8080');
 });
