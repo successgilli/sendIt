@@ -31,7 +31,7 @@ route.get('/parcels/:parcelsId',function(req,res){
         let message={
           value:'not found'
         };
-        res.status('202').send(message);
+        res.status('404').send(message);
       }
       else{
 
@@ -55,7 +55,7 @@ route.get('/users/:userId/parcels',function(req,res){
     let message={
       value:'not found'
     };
-    res.status('202').send(message);
+    res.status('404').send(message);
 
   }
 
@@ -74,7 +74,7 @@ route.put('/parcels/:parcelId/cancel',function(req,res){
     let message={
       value:'not found'
     };
-      res.status('202').send(message);
+      res.status('404').send(message);
   }
   else{
     let tempdata=[];
@@ -92,7 +92,7 @@ route.post('/parcels',function(req,res){
   x.id=Math.floor((Math.random()*10000000+i));
   dat.push(x);
   i++;
-  res.status('200').json(req.body);
+  res.status('201').json(req.body);
 
 })
 
