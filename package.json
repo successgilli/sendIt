@@ -4,7 +4,9 @@
   "description": "a simple courier app",
   "main": "app.js",
   "scripts": {
-    "test": "mocha || true"
+    "test": "mocha || true",
+    "coverage": "node node_modules/.bin/istanbul cover _mocha -- -R spec",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,9 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
     "express": "^4.16.4",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
   }
 }
