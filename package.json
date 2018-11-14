@@ -4,7 +4,9 @@
   "description": "a simple courier app",
   "main": "app.js",
   "scripts": {
-    "test": "mocha || true",
+    "build": "babel --presets env src -d dist",
+    "start": "npm run build && nodemon dist/app.js",
+    "test": "mocha --require babel-register || true",
     "coverage": "node node_modules/.bin/istanbul cover _mocha -- -R spec",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
@@ -26,5 +28,10 @@
     "express": "^4.16.4",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
   }
 }

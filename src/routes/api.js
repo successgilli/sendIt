@@ -1,8 +1,8 @@
-var express=require('express');
-var route=express.Router();
-var db=require('../model/db.js');
-  var dat=db.x();
-  var i=1;
+let express=require('express');
+let route=express.Router();
+import {x} from '../model/db.js';
+  let dat=x();
+  let i=1;
 
 //cross origin resource sharing
 
@@ -16,12 +16,12 @@ route.get('/',function(req,res){
   let message={
     value: 'welcome to Gilberts API. nav to "/parcels " for all orders, post ur order to "/parcels", get all orders by a user from "/users/userName/parcels", cancel order from "/parcels/parcelID/cancel" and get specific parcel with "/parcel/parcelsID" '
   };
-  res.status('200').send(message.value);
+  res.status('200').json(message.value);
 })
 
 route.get('/parcels',function(req,res){
   //res.header("Access-Control-Allow-Origin", "*");
-  res.status('200').json({...dat});
+  res.status('200').json(dat);
 
 })
 
@@ -57,7 +57,7 @@ route.get('/users/:userId/parcels',function(req,res){
     }
   })
   if(found==='yes'){
-    res.status('200').send({...tempData});
+    res.status('200').send(tempData);
   }else{
     let message={
       value:'not found'
@@ -87,7 +87,7 @@ route.put('/parcels/:parcelId/cancel',function(req,res){
     let tempdata=[];
     tempdata.push(dat[cancelIndex]);
     dat.splice(cancelIndex,1);
-    res.status('200').json({...tempdata});
+    res.status('200').json(tempdata);
   }
 
 
@@ -95,7 +95,7 @@ route.put('/parcels/:parcelId/cancel',function(req,res){
 
 route.post('/parcels',function(req,res){
 
-  var x=req.body;
+  let x=req.body;
   x.id=Math.floor((Math.random()*10000000+i));
   dat.push(x);
   i++;
@@ -103,8 +103,4 @@ route.post('/parcels',function(req,res){
 
 })
 
-
-
-
-
-module.exports=route;
+export {route}

@@ -1,9 +1,10 @@
-var express=require('express');
+import express from 'express';
 
-var bodyParser=require('body-parser');
-const routes=require('./routes/api');
+import bodyParser from 'body-parser';
+import {route} from './routes/api';
 
-var app=express();
+
+let app=express();
 
 
 
@@ -13,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(bodyParser.json());
 
-app.use('/api/v1',routes);
+app.use('/api/v1',route);
 
 
 
