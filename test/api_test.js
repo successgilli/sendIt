@@ -1,6 +1,6 @@
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import server from '../dist/app';
+let chai=require('chai');
+let chaiHttp=require('chai-http');
+let server=require('../dist/app') ;
 chai.use(chaiHttp);
 let expect =chai.expect;
 let should =chai.should();
