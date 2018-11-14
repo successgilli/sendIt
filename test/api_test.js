@@ -1,19 +1,20 @@
 
-var chai=require('chai');
-var chaiHttp=require('chai-http');
-var expect=require('chai').expect;
-var should=require('chai').should();
-let server=require('../app');
+import chai from 'chai';
+import chaiHttp from 'chai-http';
+import server from '../dist/app';
 chai.use(chaiHttp);
+let expect =chai.expect;
+let should =chai.should();
+
 //id and data kept here for reference through out
-var id;
-var data;
+let id;
+let data;
 
 //test get welcome message routes
-describe("test for welcome route",function(){
+describe("test for welcome route",()=>{
   it("should return a string ",(done)=>{
     chai.request(server).get('/api/v1').end((req,res)=>{
-      res.body.should.be.a('object');
+      res.body.should.be.equal('welcome to Gilberts API. nav to "/parcels " for all orders, post ur order to "/parcels", get all orders by a user from "/users/userName/parcels", cancel order from "/parcels/parcelID/cancel" and get specific parcel with "/parcel/parcelsID" ');
       res.should.have.status(200);
     })
     done();
@@ -21,7 +22,7 @@ describe("test for welcome route",function(){
 })
 
 //get parcel rote test
-describe(' test the get parcel route "/"parcels',  function(){
+describe(' test the get parcel route "/"parcels', ()=>{
 
 
 let param='/api/v1/parcels';
@@ -30,7 +31,7 @@ let param='/api/v1/parcels';
 
         chai.request(server).get(param).end((err,res)=>{
             res.should.have.status(200);
-            (res.body).should.be.a('object');
+            (res.body).should.be.a('array');
 
 
         })
@@ -42,7 +43,7 @@ let param='/api/v1/parcels';
 });
 
 //test for post /parcels route
-describe(' test the post parcel route /parcels',  function(){
+describe(' test the post parcel route /parcels', ()=>{
 
 
 let param='/api/v1/parcels';
@@ -93,7 +94,7 @@ let param='/api/v1/parcels';
 });
 
 // test for the get parcel with Parcel  ID
-describe(' test the get route "/parcels/:parcelsId" ',  function(){
+describe(' test the get route "/parcels/:parcelsId" ', ()=>{
 
 
 let param='/api/v1/parcels/:parcelId';
@@ -126,7 +127,7 @@ let param='/api/v1/parcels/:parcelId';
 });
 
 // test  for the get parcels of a user route.
-describe(' test the get route "/users/:userId/parcels" ',  function(){
+describe(' test the get route "/users/:userId/parcels" ', ()=>{
 
 
 let param='/api/v1/users/:userId/parcels';
@@ -163,15 +164,15 @@ let param='/api/v1/users/:userId/parcels';
 });
 
 //test the route for get parcels to return all orders in database/structure
-  describe("testing the route get 'api/parcels' ",function(){
+  describe("testing the route get 'api/parcels' ",()=>{
     it('should be able to produce orders in the database ',(done)=>{
         chai.request(server).get('/api/v1/parcels').end((err,res)=>{
           res.body.should.have.property("0");
           res.should.have.status(200);
           id=res.body[3].id;
-          res.body.should.be.a('object');
+          res.body.should.be.a('array');
           //test that all data returned are valid
-          for(i=0;i<5;i++){
+          for(let i=0;i<5;i++){
               res.body[i].should.have.property('id');
               res.body[i].should.have.property('name');
             //  console.log(res.body[i]);
@@ -197,7 +198,7 @@ let param='/api/v1/users/:userId/parcels';
 
       console.log('first '+id);
       chai.request(server).put('/api/v1/parcels/'+id+'/cancel').end((err,res)=>{
-        res.body.should.be.a('object');
+        res.body.should.be.a('array');
         res.body[0].should.have.property('id');
         //console.log(res.body);
       })
