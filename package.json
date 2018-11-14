@@ -25,7 +25,9 @@
   "scripts": {
     "build": "babel --presets env src -d dist",
     "start": "npm run build && nodemon dist/app.js",
-    "test": "mocha --require babel-register || true"
+    "test": "mocha --require babel-register || true",
+    "coverage": "node node_modules/.bin/istanbul cover _mocha -- -R spec",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
