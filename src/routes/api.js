@@ -1,4 +1,4 @@
-let express=require('express');
+import express from 'express';
 let route=express.Router();
 import {x} from '../model/db.js';
   let dat=x();

@@ -8,7 +8,7 @@ var _chaiHttp = require('chai-http');
 
 var _chaiHttp2 = _interopRequireDefault(_chaiHttp);
 
-var _app = require('../dist/app');
+var _app = require('../app');
 
 var _app2 = _interopRequireDefault(_app);
 
