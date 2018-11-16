@@ -1,0 +1,203 @@
+body{
+	padding: 0px;
+	margin: 0px;
+
+}
+
+header{
+	background-color: indigo;
+	margin:0px;
+	padding-bottom: 1px;
+	padding-top: 1%;
+	position: fixed;
+	width: 100%;
+}
+
+
+#sendit{
+	color: red;
+	font-size: 25px;
+}
+
+ul{
+	
+	margin-left: 20%;
+
+}
+li{
+	display: inline;
+	margin-right: 4%;
+}
+li a{
+	color: white;
+	text-decoration: none;
+
+}
+#sendIT{
+	margin-left: 10%;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	margin-left: 10%;
+	top: 20%;
+	font-size: 20px;
+	color: white;	
+}
+#signupBar{
+	padding-left: 20%;
+}
+
+.welcome{
+	height: 100px;
+	color: white;
+	padding: 10px
+	width:80%;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
+#pix{
+	background-image: url('../img/pix1.jpg');
+	margin-top: 0px;
+	padding-bottom: 1px;
+	padding-top: 150px;
+
+}
+.pixDivs{
+	width: 80%;
+	margin: auto;
+	background-color: red;
+}
+.welcome{
+height: 30px;
+}
+#message{
+	text-indent: 30%;
+}
+#welcome{
+	
+	color: white;
+	margin-top: 200px;
+}
+#message{
+	color: white;
+	font-size: 30px;
+}
+
+#TrackInput{
+	
+	display: inline;
+}
+#TrackButton{
+	display: inline;
+	background-color: orange;
+	width: 80px;
+	cursor: pointer;
+
+}
+#help{
+	color: white;
+	text-indent: 36%;
+	margin-top: 6px;
+	margin-bottom: 18px;
+	font-weight: bold;
+}
+.dummyList{
+	margin-left: -2px;
+	margin-right: -2px;
+	padding: 15px;
+	font-weight: bold;
+	background-color: white;
+}
+.picdiv{
+	line-height: 30px;
+}
+#unorderedList{
+	
+}
+
+#dummyListCenter{
+	padding-top: 20px;
+	color: white;
+	font-weight: bold;
+	padding-bottom: 20px;
+	background-color: indigo;
+}
+#blog1,#blog2,#blog3{
+	text-align: center;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+	flex-basis: 25%;
+}
+#blog3{
+	margin-right: 0px;
+}
+.nav{
+	color: red;
+	flex-basis: 100%;
+		}
+.navBar{
+
+}
+
+#blogPost{
+	margin-top: 0px;
+	width: 90%;
+	margin: auto;
+	
+	
+}
+.clearfix{
+	clear: both;
+}
+#blogImg1{
+	background-image: url('../img/pix3.jpg');
+	height: 150px;
+}
+#blogImg2{
+	background-image: url('../img/pix4.jpg');
+	height: 150px;
+}
+#blogImg3{
+	background-image: url('../img/pix5.jpg');
+	height: 150px;
+}
+#welcomeForum{
+	padding-top: 1%;
+	text-indent: 40%;
+	color: grey;
+	margin-top: 5%;
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 25px;
+}
+	main{
+	height: 10px;
+
+}
+footer{
+	position: relative;
+	background-color: indigo;
+	width: 100%;
+	line-height: 30px;
+}
+#footer{
+	padding: 0px;
+	margin:0px;
+	margin-left: 30%;
+
+}
+#firstFoot,#secondFoot,#thirdFoot{
+	padding-right: 3%;
+	border-right: 2px solid white;
+	color: white;
+}
+
+@media (min-width: 800px){
+	#blogPost{
+		display: flex;
+		justify-content: space-between;
+		padding-left: 10%;
+	}
+}
+}

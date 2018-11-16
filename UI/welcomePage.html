@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>welcome Page</title>
-	<meta charset="utf-8" lang="en">
-	<link rel="stylesheet" type="text/css" href="sendIt.css">
+	<title>welcome To SendIT</title>
+	<link rel="stylesheet" type="text/css" href="./css/sendIt.css">
 </head>
-<body>
+		<body>
+			<header>
+				<p id="sendIT">SEND<span id="sendit">IT</span></p> 
+				<div >
+					<ul class="navBar">
 
+					<li class="nav"><a href="" id="loginBar"><li>Login</a></li>
+					<li class="nav"><a href="">Register</a></li>
+					<li class="nav"><a href="">Admin</a><li>
+					<li class="nav"><a href="">Order</a><li>
+					<li class="nav"><a href="" id="signupBar">SignIn/SignUp</a></li>
+					</ul>
+				</div>
+				
+				
+			</header>
+			<div id="pix">
+			
 
-	<div class="mainContainerW">
-
-			<h2 class="heading" id="landingHead">
-				<p id="headP">SendIt !</p>
-
-			</h2>
-
-			<ul id="headp">
-						<li class="menu_llist">Register</li>
-						<li class="menu_llist">Login</li>
-						<li class="menu_llist">Order</li>
-						<li class="menu_llist">Get your parcel</li>
-						<li class="menu_llist"><a href="adminLogin.html">Admin</a> </li>
+			<div class="welcome" id="message">
+					Welcome to SendIT
+			</div>
+			<ul class="picdiv" id="unorderedList">
+				<li class="dummyList">Order</li>
+				<li class="dummyList" id="dummyListCenter">Track</li>
+				<li class="dummyList" >Ship</li>
 			</ul>
 
-			<div id="loginContainer">
-				<legend>LOGIN</legend><br>
-				<form id="logIn" method="post" action="#">
-					<input class="login" type="text" placeholder="Username" name="Username" id="name" required="required">
-					<input  class="login" type="password" placeholder="Password" name="Userpassword" id="password" required="required">
-					<br><br>
-					<button class="submit"> <a href="profilePage.html">LogIn</a> </button>
-				</form>
+			<input id="TrackInput" type="text" name="" placeholder="Tracking ID">
+			<div id="TrackButton">TRACK</div><br>
+			<div class="pixdiv">
+				<p id="help">NEED HELP?</p>
+			</div>
+				
+			
+			
+				
 			</div>
 
+			<div class="welcome" id="welcomeForum">
+					Welcome to SendIT Forum
+			</div>
+			
+			<div id="blogPost">
 
-											<div id="clickToReg">
-												<p>please click the button below to register</p>
-												<button class="submit"> <a href="signupPage.html">Click to Register</a>  </button>
-											</div>
-
-
-			</div><!--end main container div-->
-
-
-
-</body>
-<footer>
-		<p id="footer1">
-			author: Gilberto emilito <br>
-
-		</p>
-		<p id="footer2">
-			C. 2018 <br>
-
-		</p>
-
-
-</footer>
+				<div id="blog1">
+					<div id="blogImg1">
+						
+					</div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				<div id="blog2">
+					<div id="blogImg2">
+						
+					</div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				<div id="blog3">
+					<div id="blogImg3">
+						
+					</div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div><br>
+				<main>
+					
+				</main>
+				
+				
+			</div>
+			<footer>
+				<ul id="footer"><li id="firstFoot">@ 2018</li><li id="secondFoot">Terms of Use</li><li id="thirdFoot">Security and Privacy</li></ul>
+			</footer>	
+			<script type="text/javascript" src="./js/sendit.js"></script>
+		</body>
+		
 </html>
