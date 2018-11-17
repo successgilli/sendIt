@@ -19,7 +19,7 @@ route.get('/',function(req,res){
   res.status('200').json(message.value);
 })
 
-route.get('/parcels',function(req,res){
+route.get('/parcels', (req,res)=>{
   //res.header("Access-Control-Allow-Origin", "*");
   res.status('200').json(dat);
 
